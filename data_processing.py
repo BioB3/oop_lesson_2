@@ -188,3 +188,8 @@ print(f'{(len(male_passengers_survived.table) / len(male_passengers.table)) * 10
 print('The survival rate of female passengers')
 print(f'{(len(female_passengers_survived.table) / len(female_passengers.table)) * 100} %')
 print()
+
+embarked_table = male_passengers.filter(lambda x: x['embarked'] == 'Southampton')
+print('The total number of male passengers embarked at Southampton')
+print(embarked_table.aggregate(lambda x: len(x), 'class'))
+print()
