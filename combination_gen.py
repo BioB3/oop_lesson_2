@@ -20,8 +20,3 @@ def gen_comb_list(list_set):
         for combination in rest_combinations:
             result.append([element] + combination)
     return result
-
-
-print(gen_comb_list([[1, 2, 3]]))
-print(gen_comb_list([[1, 2, 3], [4, 5]]))
-print(gen_comb_list([[1, 2, 3], [4, 5], [6, 7, 8]]))
