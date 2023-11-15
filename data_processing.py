@@ -224,12 +224,11 @@ print('The survival rate of female passengers')
 print(f'{(len(female_passengers_survived.table) / len(female_passengers.table)) * 100} %')
 print()
 
-<<<<<<< HEAD
 embarked_table = male_passengers.filter(lambda x: x['embarked'] == 'Southampton')
 print('The total number of male passengers embarked at Southampton')
 print(embarked_table.aggregate(lambda x: len(x), 'class'))
 print()
-=======
+
 my_pivot = my_table7.pivot_table(['embarked', 'gender', 'class'], ['fare', 'fare', 'fare', 'last'], [lambda x: min(x), lambda x: max(x), lambda x: sum(x)/len(x), lambda x: len(x)])
 print(my_pivot)
 print()
@@ -242,4 +241,3 @@ print()
 
 print(my_table7.pivot_table(['class', 'gender', 'survived'], ['survived', 'fare'], [lambda x: len(x), lambda x: sum(x)/len(x)]))
 print()
->>>>>>> pivot_feature
