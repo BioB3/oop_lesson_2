@@ -227,3 +227,6 @@ print()
 my_pivot = my_table7.pivot_table(['embarked', 'gender', 'class'], ['fare', 'fare', 'fare', 'last'], [lambda x: min(x), lambda x: max(x), lambda x: sum(x)/len(x), lambda x: len(x)])
 print(my_pivot)
 print()
+
+print(my_table6.pivot_table(['position'], ['passes', 'shots'], [lambda x: sum(x)/len(x), lambda x: sum(x)/len(x)]))
+print()
