@@ -230,3 +230,9 @@ print()
 
 print(my_table6.pivot_table(['position'], ['passes', 'shots'], [lambda x: sum(x)/len(x), lambda x: sum(x)/len(x)]))
 print()
+
+print(my_table3.pivot_table(['EU', 'coastline'], ['temperature', 'latitude', 'latitude'], [lambda x: sum(x)/len(x), lambda x: min(x), lambda x: max(x)]))
+print()
+
+print(my_table7.pivot_table(['class', 'gender', 'survived'], ['survived', 'fare'], [lambda x: len(x), lambda x: sum(x)/len(x)]))
+print()
